@@ -7,10 +7,15 @@
 
 class PorkBarbecue
 
-	def make
+	def prepare
 		slice_meet
 		slice_onion
 		marinade
+		mix_it
+	end
+
+	def cook
+		# cook it
 	end
 
 	def slice_meet
@@ -22,7 +27,11 @@ class PorkBarbecue
 	end
 
 	def marinade 
-		raise 'Please made some cool marinade'
+		raise 'Please made some cool specific marinade'
+	end
+
+	def mix_it
+		# mix all this things
 	end
 
 end	
