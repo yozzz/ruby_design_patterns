@@ -1,7 +1,9 @@
 # Goal communication without coupling
-# In one-to-many relationship, when one objects(observers) want to be informed when other object changed(In GoF subject - source of the news)
-# When object need to be informed about the state of the subject it registers as an observer
+# In one-to-many relationship, one objects(observers) want to be informed
+# when other object(In GoF subject - source of the news) changed
+# if object need to be informed about the state of the subject it registers as an observer
 
+# Module Subject can be replaced with Ruby built-in module Observable
 module Subject
 	def initialize
 		@observers=[]
