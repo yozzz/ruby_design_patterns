@@ -7,43 +7,43 @@
 
 class PorkBarbecue
 
-	def prepare
-		slice_meet
-		slice_onion
-		marinade
-		mix_it
-	end
+  def prepare
+    slice_meet
+    slice_onion
+    marinade
+    mix_it
+  end
 
-	def cook
-		# cook it
-	end
+  def cook
+    # cook it
+  end
 
-	def slice_meet
-		# just do it
-	end
+  def slice_meet
+    # just do it
+  end
 
-	def slice_onion
-		# just do it
-	end
+  def slice_onion
+    # just do it
+  end
 
-	def marinade 
-		raise 'Please made some cool specific marinade'
-	end
+  def marinade 
+    raise 'Please made some cool specific marinade'
+  end
 
-	def mix_it
-		# mix all this things
-	end
+  def mix_it
+    # mix all this things
+  end
 
-end	
+end 
 
 class PomegranatePorkBarbecue < PorkBarbecue
-	def marinade 
-		@marinade = PomegranateMarinade.new
-	end
+  def marinade 
+    @marinade = PomegranateMarinade.new
+  end
 end
 
-class ClassicPorkBarbecue	< PorkBarbecue
-	def marinade
-		@marinadte = ClassicMarinade.new
-	end
+class ClassicPorkBarbecue < PorkBarbecue
+  def marinade
+    @marinadte = ClassicMarinade.new
+  end
 end

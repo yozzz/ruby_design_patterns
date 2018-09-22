@@ -4,36 +4,36 @@
 
 class Package
 
-	def initialize(packaging)
-		@packaging = packaging
-	end
+  def initialize(packaging)
+    @packaging = packaging
+  end
 
-	def pack
-		@packaging.pack
-	end
+  def pack
+    @packaging.pack
+  end
 end
 
 
 class GlassWaterPackaging
-	
-	def pack
-		puts "Wrapping the bottle in bubble wrap..."
-		puts "Sealing bottle in the in a plastic bag..."
-		puts "Stuffing empty spaces in the box with packing material..."
-		puts "Placing inside the box..."
-		puts "Done."
-	end
+  
+  def pack
+    puts "Wrapping the bottle in bubble wrap..."
+    puts "Sealing bottle in the in a plastic bag..."
+    puts "Stuffing empty spaces in the box with packing material..."
+    puts "Placing inside the box..."
+    puts "Done."
+  end
 
 end
 
 class DryIcePackaging
 
-	def pack
-		puts "Putting dry ice into plastic bag..."
-		puts "Putting bag with dry ice into styrofoam box..."
-		puts "Put styrofoam box into fiberboard..."
-		puts "Done."
-	end
+  def pack
+    puts "Putting dry ice into plastic bag..."
+    puts "Putting bag with dry ice into styrofoam box..."
+    puts "Put styrofoam box into fiberboard..."
+    puts "Done."
+  end
 
 end
 
