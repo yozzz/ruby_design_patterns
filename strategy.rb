@@ -1,6 +1,6 @@
 # Pull the algorithm out into a separate object
-# Created objects(strategies) will become a family of algorithms
-# Code will receive run-time instructions on which algorithm to use
+# created objects(strategies) will become a family of algorithms
+# code will receive run-time instructions on which algorithm to use
 
 class Package
 
