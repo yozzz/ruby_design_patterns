@@ -4,6 +4,7 @@
 # if object need to be informed about the state of the subject it registers as an observer
 
 # Module Subject can be replaced with Ruby built-in module Observable
+
 module Subject
   def initialize
     @observers=[]
@@ -71,4 +72,3 @@ check_sold_out = CheckSoldOut.new
 OrganizerSettings.new(check_sold_out)
 EventReport.new(check_sold_out)
 check_sold_out.call
-    
