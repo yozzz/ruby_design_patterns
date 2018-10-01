@@ -6,22 +6,25 @@
 require 'yaml'
 
 class ApplicationSettings
-  attr_reader :settings, :path
 
   def initialize
     @path = File.join(__dir__, 'settings.yml')
   end
 
   def add(key, value)
-    settings = file_open
-    data = {}
-    data[key.to_sym] = value
-    settings.write(data.to_yaml)
-    settings.close
+    file =  File.exists?(@path) ? File.open(@path, 'r+') : File.open(@path, 'w+')
+    yml_data = data
+    yml_data[key.to_sym] = value
+    file.write(yml_data.to_yaml)
+    file.close
   end
 
   def data
-    YAML::load_file(@path)
+    if File.exists?(@path)
+       YAML::load_file(@path) || {}
+    else
+      {}
+    end
   end
 
   @@instance = ApplicationSettings.new
@@ -30,24 +33,13 @@ class ApplicationSettings
     return @@instance
   end
 
-  private
-
-  def file_open
-    if File.exists? @path
-      File.open(@path, "a+")
-    else
-      File.open(@path, "w+")
-    end
-  end
-
   private_class_method :new
 end
 
 settings = ApplicationSettings.instance
-puts ApplicationSettings.instance.object_id
-puts ApplicationSettings.instance.object_id
+
 settings.add('language', 'ua')
 settings.add('timezone', 'Europe/Kyiv')
 
-settings.data[:language]
-settings.data[:timezone]
+puts settings.data[:language]
+puts settings.data[:timezone]
