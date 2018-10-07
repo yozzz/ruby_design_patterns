@@ -1,1 +1,1 @@
-YA examples of some design patterns in ruby
+YA part of design patterns in ruby
